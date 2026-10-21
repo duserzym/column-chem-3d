@@ -50,4 +50,4 @@ This is an educational visualisation, **not** an SOP. Follow your own laboratory
 - **Trademarks**: AG and Bio-Rad (Bio-Rad Laboratories); Eichrom, Sr Resin, Ln Resin, TRU, UTEVA, DGA and TEVA (Eichrom Technologies / TrisKem); Savillex; Parr. Names are used only to identify the materials and labware being described, and the project is not affiliated with or endorsed by any of these companies or laboratories.
 - **Sources**: procedures are paraphrased and transcribed with attribution for teaching. Literature links point to Google Scholar searches.
 
-The repository is **private** while under review. The Pages workflow is manual-only (`workflow_dispatch`), because a Pages site is always public.
+**Live site:** <https://duserzym.github.io/column-chem-3d/>

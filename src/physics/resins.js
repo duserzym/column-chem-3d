@@ -47,7 +47,7 @@ export const RESINS = {
     group: 'HDEHP — di(2-ethylhexyl) orthophosphoric acid',
     capacity: '≈0.17 mmol Ln per mL bed (vendor)',
     sizes: ['20–50 µm', '50–100 µm', '100–150 µm'],
-    sizeNote: 'Boise uses 50–100 µm for Lu (Yb removal) and 100–150 µm for Hf clean-up.',
+    sizeNote: 'The transcribed procedures use 50–100 µm for Lu (Yb removal) and 100–150 µm for Hf clean-up.',
     eps: 0.65, rho: null,
     mechanism: 'Cation-exchange-like extraction by HDEHP: k′ increases strongly across the lanthanides (La < … < Nd < Sm < … < Yb < Lu) and falls with acidity. Hf⁴⁺ is held even in 6 M HCl and released with HF.',
     color: 0xe8eef2,
@@ -136,7 +136,7 @@ export const ELEMENTS = {
 // ---------------------------------------------------------------------------------------
 // D / k′ tables: [M, value] points, log-linear interpolation in log10(value) vs M.
 // Keys: RESIN → MEDIUM → ELEMENT. Media: 'HCl', 'HBr', 'HNO3', 'HCl-HF' (HF-bearing HCl),
-// 'HF' , 'HCit' (citric–HNO₃–H₂O₂ mixture, Boise Hf clean-up), 'H2O' (M ignored).
+// 'HF' , 'HCit' (citric–HNO₃–H₂O₂ mixture, Hf clean-up), 'H2O' (M ignored).
 const T = (pts) => pts;
 
 export const DTABLE = {

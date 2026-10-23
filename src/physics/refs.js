@@ -3,8 +3,6 @@ const gs = (q) => 'https://scholar.google.com/scholar?q=' + encodeURIComponent(q
 
 export const REFS = {
   guidebook: { label: 'U-Th-Pb Lab Guidebook (user’s lab document)', url: '#scene=atlas' },
-  boise: { label: 'BSU Isotope Geology Lab binders (photos IMG_0607–0622)', url: '#scene=atlas' },
-  edwards: { label: 'UMN Minnesota Isotope Lab U/Th procedure (photos IMG_0064–0071)', url: '#scene=atlas' },
   krogh73: { label: 'Krogh (1973) GCA 37, 485', url: gs('Krogh 1973 low-contamination method for hydrothermal decomposition of zircon') },
   mattinson05: { label: 'Mattinson (2005) Chem. Geol. 220, 47', url: gs('Mattinson 2005 zircon U-Pb chemical abrasion CA-TIMS method') },
   gerstenberger97: { label: 'Gerstenberger & Haase (1997) Chem. Geol. 136, 309', url: gs('Gerstenberger Haase 1997 silica gel emitter lead') },

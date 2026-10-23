@@ -68,7 +68,7 @@ describe('resin chemistry (shape checks)', () => {
     expect(distribution('AG1X8', 'U', { acid: 'HNO3', M: 8 })).toBeCloseTo(16, 0);
     expect(distribution('AG1X8', 'Th', { acid: 'HNO3', M: 8 })).toBeGreaterThan(100);
   });
-  it('AG50W-X8 in 0.6 M HCl: Na < (K,Rb) < Ca as on the Boise Rb page', () => {
+  it('AG50W-X8 in 0.6 M HCl: Na < (K,Rb) < Ca as on the transcribed Rb page', () => {
     const d = (e) => distribution('AG50WX8', e, { acid: 'HCl', M: 0.6 });
     expect(d('Na')).toBeLessThan(d('Rb'));
     expect(d('Rb')).toBeLessThan(d('Ca'));
@@ -93,8 +93,8 @@ describe('lab protocols behave as written', () => {
     expect(get('U', 'U')).toBeGreaterThan(0.95);
     expect(get('Pb', 'Pb')).toBeGreaterThan(0.95);
   });
-  it('Edwards U–Th: Fe to waste, Th in 6 N HCl, U in H₂O', () => {
-    const { get } = rec('uth-edwards');
+  it('Carbonate U–Th: Fe to waste, Th in 6 N HCl, U in H₂O', () => {
+    const { get } = rec('uth-carbonate');
     expect(get('waste', 'Fe')).toBeGreaterThan(0.95);
     expect(get('Th', 'Th')).toBeGreaterThan(0.95);
     expect(get('U', 'U')).toBeGreaterThan(0.9);

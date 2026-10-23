@@ -32,7 +32,7 @@ export default {
       value: cur.id,
       onChange: (id) => load(id),
     });
-    pick.body.append(sel.el, para('Lab procedures (guidebook, Boise binders, UMN Edwards lab) are transcribed step by step; “literature” cards are representative published schemes whose volumes are indicative only.'));
+    pick.body.append(sel.el, para('Procedures from the guidebook and photographed protocol binders are transcribed step by step; “literature” cards are representative published schemes whose volumes are indicative only.'));
     const card = section('Protocol card', { icon: '☰' });
     const holder = h('div');
 
@@ -80,14 +80,14 @@ export default {
 
     const prov = section('Sources & provenance', { icon: '✓', open: false });
     prov.body.append(
-      para('Transcriptions were made from photographs of the BSU Isotope Geology Laboratory binders (IMG_0607–0622; IMG_0621 duplicates IMG_0607), the Minnesota Isotope Lab U/Th procedure (IMG_0064–0071) and the user’s U-Th-Pb Lab Guidebook. The original documents are not redistributed with this project.'),
+      para('Transcriptions were made from photographs of isotope chemistry procedure binders (IMG_0607–0622; IMG_0621 duplicates IMG_0607), the carbonate and fluid U/Th procedures (IMG_0064–0071) and the user’s U-Th-Pb Lab Guidebook. The original documents are not redistributed with this project.'),
       table(['Photo', 'Content'], [
         ['IMG_0607 / 0621', 'Pb separation by anion exchange in dilute HBr'], ['IMG_0608', 'Silica gel emitter preparation'], ['IMG_0609', '“Tantalum gel” for Rb & Sr'],
         ['IMG_0610–0611', 'Sm–Nd by cation exchange in methyllactic acid'], ['IMG_0612', 'Ce separation by oxidation + HDEHP solvent extraction'],
         ['IMG_0613', 'Primary Re clean-up'], ['IMG_0614', 'Secondary Re clean-up'], ['IMG_0615', 'Os solvent extraction & micro-distillation'],
         ['IMG_0616', 'Lu–Hf micro-columns'], ['IMG_0617', 'Lu–Hf milli-columns'], ['IMG_0618', 'Lu clean-up on Ln-spec'], ['IMG_0619', 'Hf clean-up on Ln-spec'],
         ['IMG_0620', 'Rb clean-up by cation exchange'], ['IMG_0622', 'Sequential dissolution of feldspars'],
-        ['IMG_0064–0068', 'UMN carbonate U/Th: weighing, digestion, spiking, Fe co-precipitation, columns'], ['IMG_0069–0071', 'UMN seawater & hydrothermal fluid U/Th'],
+        ['IMG_0064–0068', 'Carbonate U/Th: weighing, digestion, spiking, Fe co-precipitation, columns'], ['IMG_0069–0071', 'Seawater & hydrothermal fluid U/Th'],
       ]),
       sources([REFS.krausNelson, REFS.strelow60, REFS.faris64, REFS.horwitz92, REFS.horwitz93, REFS.pin97, REFS.munker01, REFS.rehkamper96, REFS.houshBowring91, REFS.bioRad, REFS.eichrom]),
     );

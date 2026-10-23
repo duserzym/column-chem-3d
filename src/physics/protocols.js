@@ -4,8 +4,8 @@
 // Provenance fields
 //   source: where each protocol (and, where it differs, each step) comes from:
 //     'U-Th-Pb Lab Guidebook'        – the user's lab guidebook (.doc)
-//     'Boise photo IMG_06xx'         – photographs of BSU Isotope Geology Lab binders
-//     'UMN Edwards lab IMG_00xx'     – photographs of the Minnesota Isotope Lab U/Th procedure
+//     'Protocol photo IMG_06xx'      – photographs of isotope chemistry procedure binders
+//     'U/Th procedure IMG_00xx'      – photographs of carbonate and fluid U/Th procedures
 //     'literature'                   – representative published scheme (verify before use)
 //   uncertain: true                  – value not stated / ambiguous in the source; see note
 //
@@ -149,8 +149,8 @@ export const PROTOCOLS = [
   },
   // ===================================================================== Pb isotopes
   {
-    id: 'pb-hbr-boise', system: 'Pb isotopes', title: 'Pb separation by anion exchange in dilute HBr (whole rock, feldspar leachates)',
-    source: 'Boise photo IMG_0607 / IMG_0621 (identical pages; last modified 7/15/16)', verified: true,
+    id: 'pb-hbr', system: 'Pb isotopes', title: 'Pb separation by anion exchange in dilute HBr (whole rock, feldspar leachates)',
+    source: 'Protocol photo IMG_0607 / IMG_0621 (identical pages; last modified 7/15/16)', verified: true,
     resin: 'AG1X8', mesh: '200–400 mesh, Cl⁻ form (Eichrom or Bio-Rad)', bedVolume: ul(100),
     column: geom('heatshrink', ul(100), 2.5, 1.0, { assumed: 'Geometry representative; resin volume from the procedure.' }),
     elements: ['Pb', 'Zn', 'Fe', 'U', 'REE', 'Matrix'],
@@ -180,7 +180,7 @@ export const PROTOCOLS = [
   // ===================================================================== Lu–Hf
   {
     id: 'luhf-micro', system: 'Lu–Hf', title: 'Lu–Hf separation for zircons (micro-columns)',
-    source: `${GB}; Boise photo IMG_0616`, verified: true,
+    source: `${GB}; Protocol photo IMG_0616`, verified: true,
     resin: 'AG50WX8', mesh: '200–400 mesh, H⁺ form', bedVolume: ul(100),
     column: geom('pfa', ul(100), 2.0, 3.0, { note: '≈0.2 cm i.d. × 1 cm, ~3 mL reservoir (as stated)' }),
     elements: ['Hf', 'Zr', 'Ti', 'Lu', 'Yb', 'REE', 'Fe', 'Matrix'],
@@ -201,7 +201,7 @@ export const PROTOCOLS = [
   },
   {
     id: 'luhf-milli', system: 'Lu–Hf', title: 'Lu–Hf separation for zircons (milli-columns)',
-    source: `${GB}; Boise photo IMG_0617`, verified: true,
+    source: `${GB}; Protocol photo IMG_0617`, verified: true,
     resin: 'AG50WX8', mesh: '200–400 mesh, H⁺ form', bedVolume: 1.0,
     column: geom('pfa', 1.0, 5.0, 5.0, { note: '≈0.5 cm i.d. × 5 cm, >5 mL reservoir (as stated)' }),
     elements: ['Hf', 'Zr', 'Ti', 'Lu', 'Yb', 'REE', 'Fe', 'Matrix'],
@@ -221,7 +221,7 @@ export const PROTOCOLS = [
   },
   {
     id: 'lu-ln', system: 'Lu–Hf', title: 'Lu clean-up by HDEHP (Ln-spec) — Yb removal',
-    source: 'Boise photo IMG_0618 (last modified 3/2/07)', verified: true,
+    source: 'Protocol photo IMG_0618 (last modified 3/2/07)', verified: true,
     resin: 'LN', mesh: 'Ln-spec 50–100 µm', bedVolume: 1.25,
     column: geom('pfa', 1.25, 4.0, 5.0, { note: 'Savillex PFA 4 mm i.d. × 10 cm resin bed (1.25 mL) as stated; reservoir assumed' }),
     elements: ['Lu', 'Yb', 'REE', 'Fe', 'Matrix'],
@@ -241,7 +241,7 @@ export const PROTOCOLS = [
   },
   {
     id: 'hf-ln', system: 'Lu–Hf', title: 'Hf clean-up by HDEHP (Ln-spec)',
-    source: 'Boise photo IMG_0619 (last modified 3/2/07)', verified: true,
+    source: 'Protocol photo IMG_0619 (last modified 3/2/07)', verified: true,
     resin: 'LN', mesh: 'Ln-spec 100–150 µm, H⁺ form (discard after ~12 uses)', bedVolume: 1.0,
     column: geom('pfa', 1.0, 6.0, 50, { note: '1 mL resin, ~3.8 cm × 0.6 cm i.d., >50 mL reservoir (as stated)' }),
     elements: ['Hf', 'Zr', 'Ti', 'Lu', 'REE', 'Fe', 'Matrix'],
@@ -269,7 +269,7 @@ export const PROTOCOLS = [
   // ===================================================================== Rb–Sr
   {
     id: 'rb-ag50', system: 'Rb–Sr', title: 'Rb clean-up by cation exchange',
-    source: 'Boise photo IMG_0620 (last modified 7/30/09)', verified: true,
+    source: 'Protocol photo IMG_0620 (last modified 7/30/09)', verified: true,
     resin: 'AG50WX8', mesh: '200–400 mesh', bedVolume: 3.0,
     column: geom('quartz', 3.0, 6.0, 20, { note: '3 mL resin; 6 mm i.d. × 10.5 cm (as stated); reservoir assumed' }),
     plates: 90,
@@ -309,7 +309,7 @@ export const PROTOCOLS = [
   // ===================================================================== Sm–Nd
   {
     id: 'smnd-mla', system: 'Sm–Nd', title: 'Sm–Nd separation by cation exchange in methyllactic acid',
-    source: 'Boise photo IMG_0610 / IMG_0611 (last modified 12/29/06)', verified: true,
+    source: 'Protocol photo IMG_0610 / IMG_0611 (last modified 12/29/06)', verified: true,
     resin: 'AG50WX8', mesh: '200–400 mesh', bedVolume: Math.PI * 0.1 * 0.1 * 20,
     column: geom('quartz', Math.PI * 0.1 * 0.1 * 20, 2.0, 7.0, { note: '20 cm × 2 mm i.d., pressurised to 1.2 bar dry N₂; 7 mL syringe-body reservoir (as stated)' }),
     plates: 250,
@@ -347,7 +347,7 @@ export const PROTOCOLS = [
   // ===================================================================== Re–Os
   {
     id: 're-primary', system: 'Re–Os', title: 'Primary Re clean-up by anion exchange (HCl–HNO₃)',
-    source: 'Boise photo IMG_0613 (last modified 12/29/06)', verified: true,
+    source: 'Protocol photo IMG_0613 (last modified 12/29/06)', verified: true,
     resin: 'AG1X8', mesh: 'AG-1 X8 (mesh not stated)', bedVolume: 1.0, meshUncertain: true,
     column: geom('pfa', 1.0, 6.0, 10, { note: '1 mL resin, about 3 mm below the reservoir (as stated); i.d. assumed' }),
     elements: ['Re', 'Fe', 'Matrix', 'Pb'],
@@ -371,7 +371,7 @@ export const PROTOCOLS = [
   },
   {
     id: 're-secondary', system: 'Re–Os', title: 'Secondary Re clean-up by anion exchange',
-    source: 'Boise photo IMG_0614 (last modified 12/29/06)', verified: true,
+    source: 'Protocol photo IMG_0614 (last modified 12/29/06)', verified: true,
     resin: 'AG1X8', mesh: 'AG 1-X8 100–200 mesh', bedVolume: 0.25,
     column: geom('pfa', 0.25, 4.0, 3.0, { note: '0.25 mL Savillex PFA columns, filled to just below the reservoir' }),
     elements: ['Re', 'Fe', 'Matrix'],
@@ -387,10 +387,10 @@ export const PROTOCOLS = [
     ],
     after: 'Dry; 1 drop each conc. HCl and HNO₃, swirl, dry; take up in 2 µL Ba(NO₃)₂ solution and load on Pt filament (N-TIMS).',
   },
-  // ===================================================================== U–Th (Edwards)
+  // ===================================================================== U–Th (carbonates)
   {
-    id: 'uth-edwards', system: 'U–Th', title: 'U–Th for carbonates (UMN Edwards lab)',
-    source: 'UMN Edwards lab IMG_0064–0068 (rev. 02/22/2023 D. Parmenter & R. L. Edwards)', verified: true,
+    id: 'uth-carbonate', system: 'U–Th', title: 'U–Th for carbonates',
+    source: 'Carbonate U/Th procedure IMG_0064–0068 (rev. 02/22/2023)', verified: true,
     resin: 'AG1X8', mesh: 'not stated on the photographed pages — AG1-X8 anion resin per Edwards et al. (1987)', meshUncertain: true,
     bedVolume: 0.5, cvNote: 'CV = volume of the thin portion of the column (posted per column size in the lab); 500 µL resin is the suggested starting amount',
     column: geom('pfa', 0.5, 4.0, 1.5, { assumed: 'Bed 0.5 mL (≈ the 500 µL starting resin amount); reservoir assumed.' }),
@@ -451,7 +451,7 @@ export const PROTOCOLS = [
 export const DESCRIPTIVE = [
   {
     id: 'ce-solvent', system: 'La–Ce / Sm–Nd', title: 'Ce separation from REE by selective oxidation and solvent extraction',
-    source: 'Boise photo IMG_0612 (Rehkämper et al., 1996, Chem. Geol. 129, 201–208)',
+    source: 'Protocol photo IMG_0612 (Rehkämper et al., 1996, Chem. Geol. 129, 201–208)',
     steps: [
       'Reagents: ≈10 M HNO₃; 5 mM NaBrO₃ in 10 M HNO₃ (7.55 mg per 10 mL); 0.3 M HDEHP in n-heptane (0.9673 g per 10 mL) — both ≈1 week shelf life.',
       'Convert Nd (or REE) sample to nitrate: dry twice with 5–6 drops conc. HNO₃.',
@@ -465,7 +465,7 @@ export const DESCRIPTIVE = [
   },
   {
     id: 'os-extraction', system: 'Re–Os', title: 'Os solvent extraction (CCl₄) and micro-distillation',
-    source: 'Boise photo IMG_0615 (last modified 12/29/06)',
+    source: 'Protocol photo IMG_0615 (last modified 12/29/06)',
     steps: [
       'Freeze the Carius tube in methanol–dry ice; vent with a torch behind a safety shield; score and crack the tube.',
       'Pipette 4 mL conc. HBr into a 15 mL Savillex vial; thaw the aqua regia; pour into a 50 mL centrifuge tube with minimal MQ rinse.',
@@ -478,7 +478,7 @@ export const DESCRIPTIVE = [
   },
   {
     id: 'feldspar-leach', system: 'Pb isotopes', title: 'Sequential dissolution (leaching) of feldspars for initial common Pb',
-    source: 'Boise photo IMG_0622 (after Housh & Bowring, 1991; last modified 11/26/14)',
+    source: 'Protocol photo IMG_0622 (after Housh & Bowring, 1991; last modified 11/26/14)',
     steps: [
       'Transfer separate to a clean round-bottom (or flat*) 15 mL Savillex beaker in ethanol; pipette away ethanol; rinse 3× with 1 mL MQ-H₂O.',
       'Add 2 mL 3.5 M HNO₃; cap; 120 °C, 30 min; discard; rinse 3× 0.5 mL MQ.',
@@ -491,7 +491,7 @@ export const DESCRIPTIVE = [
   },
   {
     id: 'silica-gel', system: 'Loading', title: 'Silica gel emitter preparation (after Gerstenberger & Haase, 1997)',
-    source: 'Boise photo IMG_0608 (last modified 1/1/07)',
+    source: 'Protocol photo IMG_0608 (last modified 1/1/07)',
     steps: [
       '0.2 g colloidal silicic acid (Merck) : 19.6 g 0.035 M H₃PO₄ (titrated), added dropwise into a 30 mL spaghetti-tip dropper bottle under sonication.',
       'Target: loading blanks < 200 fg Pb and > 10 000 cps per pg (²⁰⁵Pb-spiked loading blanks). Sonicate regularly.',
@@ -500,7 +500,7 @@ export const DESCRIPTIVE = [
   },
   {
     id: 'ta-gel', system: 'Loading', title: '“Tantalum gel” for Rb & Sr (R. A. Creaser, Jan 2006)',
-    source: 'Boise photo IMG_0609',
+    source: 'Protocol photo IMG_0609',
     steps: [
       'Dissolve 3.0 g TaCl₅ in 25 mL 95 % ethanol + 25 mL MQ; pass through a ~4 mL cation column (MQ) to remove Rb/Sr (Ta not retained).',
       'Leave loosely capped 2–5 days until it gels; working solution = equal volumes Ta gel and MQ.',

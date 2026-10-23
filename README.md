@@ -10,7 +10,7 @@ The app shell, styling and controls are the same as in [tims-3d](https://github.
 | **U–Pb anion columns** | The guidebook column procedures on 50 µL AG1-X8 (200–400 mesh) micro-columns: zircon (HCl; Pb + U collected together), Pb column for phosphate and titanite (HBr), U column (6 M HCl), Th (8 M HNO₃), and U from waters. Includes a step player, coloured element bands, the elution curve with collected cuts, D-versus-acid curves, and a table of where each element ends up. |
 | **Resins & partitioning** | A bead-scale view of exchange sites and complexes: AG1-X8, AG50W-X8, and the Ln, Sr, TRU, UTEVA, DGA and TEVA resins. Includes D/k′ curves by acid and a resin catalogue with particle sizes. |
 | **Systems atlas** | Every transcribed protocol, plus a few representative literature schemes, as a protocol card and a running 3-D column. Covers Pb (HBr), Lu–Hf micro and milli columns, Lu and Hf clean-up on Ln-spec, Rb clean-up, Sm–Nd in methyllactic acid, Re primary and secondary clean-up, U–Th, Fe and Sr. Non-column procedures are described in text: Ce solvent extraction, Os extraction and micro-distillation, feldspar sequential leaching, silica-gel and Ta-gel emitters. |
-| **U–Th (Edwards lab)** | The UMN carbonate procedure: weighing, HNO₃ digestion, spiking, a 170 °C dry-down, Fe co-precipitation and centrifugation, then the column (Fe off in 7 N HNO₃, Th in 6 N HCl, U in H₂O). Also summarises the seawater and hydrothermal-fluid variant. |
+| **U–Th (carbonates)** | The carbonate procedure: weighing, HNO₃ digestion, spiking, a 170 °C dry-down, Fe co-precipitation and centrifugation, then the column (Fe off in 7 N HNO₃, Th in 6 N HCl, U in H₂O). Also summarises the seawater and hydrothermal-fluid variant. |
 
 ## Run
 
@@ -27,8 +27,8 @@ Deep links work, for example `#scene=upb&protocol=upb-pb-hbr&step=11` and `#scen
 ## Where the procedures come from
 
 - **U-Th-Pb Lab Guidebook** (the user's lab document): reagent calibration, microcapsule cleaning, chemical abrasion, spiking, dissolution, all U–Pb/Th/U columns, and the Lu–Hf columns.
-- **BSU Isotope Geology Laboratory binders**, from photographs IMG_0607–0622: Pb in HBr, silica-gel and Ta-gel emitters, Sm–Nd in MLA, Ce solvent extraction, Re clean-ups, Os extraction and micro-distillation, Lu–Hf micro and milli columns, Lu and Hf clean-up on Ln-spec, Rb clean-up, and feldspar sequential dissolution.
-- **Minnesota Isotope Lab (Edwards lab) U/Th procedures**, from photographs IMG_0064–0071 (rev. 02/22/2023).
+- **Isotope chemistry procedure binders**, from photographs IMG_0607–0622: Pb in HBr, silica-gel and Ta-gel emitters, Sm–Nd in MLA, Ce solvent extraction, Re clean-ups, Os extraction and micro-distillation, Lu–Hf micro and milli columns, Lu and Hf clean-up on Ln-spec, Rb clean-up, and feldspar sequential dissolution.
+- **Carbonate and fluid U/Th procedures**, from photographs IMG_0064–0071 (rev. 02/22/2023).
 
 Values that are not stated or are ambiguous in a source are flagged `uncertain` in `src/physics/protocols.js` and in the UI. Examples: the resin type is not on the photographed U–Th pages; one Re page has a duplicated step number; the Os micro-distillation final volume reads "ml" where µL is meant. The original documents and photos are **not** included in this repository.
 

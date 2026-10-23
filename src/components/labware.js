@@ -408,7 +408,7 @@ export function buildCentrifuge() {
   lid.position.y = 0.275;
   group.add(body, rotor, lid);
   parts.push(part(lid, [0, 0.14, -0.12], 'Centrifuge lid', '', { order: 0, shell: true, rotate: [-0.9, 0, 0] }));
-  parts.push(part(rotor, [0, 0.05, 0], 'Swing-bucket rotor', 'Balanced pairs of tubes (tare to < 0.1 g difference); 2500 rpm for carbonate samples, 3600 rpm for seawater Nalgene bottles (Edwards lab).', { order: 0.2 }));
+  parts.push(part(rotor, [0, 0.05, 0], 'Swing-bucket rotor', 'Balanced pairs of tubes (tare to < 0.1 g difference); 2500 rpm for carbonate samples, 3600 rpm for seawater Nalgene bottles.', { order: 0.2 }));
   return { group, parts, rotor };
 }
 

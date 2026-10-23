@@ -1,4 +1,4 @@
-// U–Th chemistry for carbonates (UMN Minnesota Isotope Lab / Edwards lab procedure).
+// U–Th chemistry for carbonates.
 import * as THREE from 'three';
 import { Exploder } from '../core/explode.js';
 import { section, buttons, readouts, h, para, note, sources, table } from '../core/ui.js';
@@ -10,7 +10,7 @@ import { protocolById } from '../physics/protocols.js';
 import { REFS } from '../physics/refs.js';
 import { glowSprite } from '../core/beam.js';
 
-const SRC = (n) => `UMN Edwards lab IMG_00${n}`;
+const SRC = (n) => `U/Th procedure IMG_00${n}`;
 const BENCH = [
   { title: 'Weigh sample into a 30 mL Teflon beaker (Day 1)', src: SRC(64), where: 'beaker',
     text: 'Powders arrive in screw-top glass vials. In the balance room (wipe bench and balance top-to-bottom, left-to-right): tare the labelled 30 mL Teflon beaker, pour in the sample without the vial touching it, weigh, rinse the walls twice with superclean H₂O, recap and swirl. ≈50 mg is a good start for pilot ages; aim for ~4 million counts of ²³⁰Th and ²³⁴U. ~10 samples : 1 blank : 1 replicate.',
@@ -19,7 +19,7 @@ const BENCH = [
     text: 'In a clean fume hood, open each beaker (cap on its side), add 10 drops 14 N HNO₃ to the wall, then spray 7 N HNO₃ to wash down powder — carefully: carbonates effervesce (CO₂).',
     fx: { beaker: [0.35, 0xf0f9ff], bubbles: true } },
   { title: 'Spike (only fully dissolved samples)', src: SRC(65), where: 'beaker', lit: true,
-    text: 'Spike aliquots come only from the resident post-doc/lab manager. Use the spike spreadsheet for target spike mass (unknowns: assume 300 ppb U; aim for ²³⁵U/²³³U ≈ 13; blanks < 10 µL). Pipette into a tared clean beaker, weigh, pour ALL into the sample. Radioactive-waste rules apply. (Spike isotopes are not named on these pages; Edwards-lab spikes are ²²⁹Th–²³³U–²³⁶U — Cheng et al. 2013 — literature.)',
+    text: 'Spike aliquots come only from the resident post-doc/lab manager. Use the spike spreadsheet for target spike mass (unknowns: assume 300 ppb U; aim for ²³⁵U/²³³U ≈ 13; blanks < 10 µL). Pipette into a tared clean beaker, weigh, pour ALL into the sample. Radioactive-waste rules apply. (Spike isotopes are not named on these pages; a published spike mixture is ²²⁹Th–²³³U–²³⁶U — Cheng et al. 2013 — literature.)',
     fx: { beaker: [0.38, 0xfda4af], spike: true } },
   { title: 'Dry at 170 °C to a non-moving white gel', src: SRC(65), where: 'beaker',
     text: 'Tap moisture down, dry at 170 °C; do NOT dry to powder (it can pop out of the beaker).',
@@ -45,7 +45,7 @@ const FINAL = [
 
 export default {
   id: 'uth',
-  title: 'U–Th (Edwards lab)',
+  title: 'U–Th (carbonates)',
   group: 'Other systems',
   icon: '⊛',
   blurb: 'Carbonate digestion, spike, Fe co-precipitation, AG1-X8 column: Fe → Th (6 N HCl) → U (H₂O)',
@@ -82,7 +82,7 @@ export default {
     root.add(cen.group);
     registerParts(ex, cen.parts, { scale: 0.7 });
 
-    const stage = new ColumnStage(ctx, protocolById('uth-edwards'), { exploder: ex, origin: new THREE.Vector3(0.05, 0, 0) });
+    const stage = new ColumnStage(ctx, protocolById('uth-carbonate'), { exploder: ex, origin: new THREE.Vector3(0.05, 0, 0) });
     root.add(stage.root);
 
     // CO₂ bubbles
@@ -115,7 +115,7 @@ export default {
       list.append(r);
       return r;
     });
-    card.body.append(para('Transcribed from “Processing Carbonate Samples for U/Th Isotope Analysis” (Minnesota Isotope Lab; method from River Shen; rev. 02/22/2023 by D. Parmenter & R. L. Edwards).'), ctl.el, ro.el, text, list);
+    card.body.append(para('Transcribed from “Processing Carbonate Samples for U/Th Isotope Analysis” (rev. 02/22/2023).'), ctl.el, ro.el, text, list);
 
     const holder = h('div');
     holder.append(...stage.buildPanel({ title: 'Column chemistry (Day 3)', intro: 'CV = volume of the thin portion of the column; the model assumes CV ≈ 0.5 mL (≈ the suggested 500 µL resin starting amount).' }));
@@ -129,10 +129,10 @@ export default {
       if (cur.kind === 'column' && !stage.player.playing && stage.player.t >= 1 && st.playing && stage.player.step === stage.protocol.steps.length - 1) go(st.i + 1);
     });
 
-    const sw = section('Seawater & hydrothermal fluids (same lab)', { icon: '≈', open: false });
+    const sw = section('Seawater & hydrothermal fluids', { icon: '≈', open: false });
     sw.body.append(table(['Step', 'Seawater / vent fluid (IMG_0069–0071)'], [
       ['Volume', '~500 mL seawater, ~100–300 mL vent fluid (Lost City), Nalgene bottles'],
-      ['Spike', 'coral-B (seawater, ~3 ng/g U) or Speleoth-B (fluids); in 7 mL Teflon beaker, pour into sample, shake'],
+      ['Spike', 'U–Th spike for seawater (~3 ng/g U) or hydrothermal fluids; in 7 mL Teflon beaker, pour into sample, shake'],
       ['Equilibrate', '80 °C oven for ~4–7 days'],
       ['Fe co-ppt', '3 drops Fe, ~30 min; ~15 drops NH₄OH; centrifuge 3 × 7 min at 3600 rpm in ≤250 mL bottles (repeat pours for 500 mL)'],
       ['Dissolve', '~7–10 drops 14 N HNO₃; 1–2 drops HClO₄, dry; 1 drop 14 N HNO₃, dry (×2); HClO₄, dry'],
@@ -141,7 +141,7 @@ export default {
       ['Storage', '1 mL vials “U” and “Th”; 14 N HNO₃ dry ×2; ~0.2 mL 1 % HNO₃; make up to ~0.5 mL'],
     ]));
     const refs = section('Sources', { icon: '✓', open: false });
-    refs.body.append(sources([REFS.edwards, REFS.edwards87, REFS.shen02, REFS.cheng13]), note('HClO₄ must be used only in a perchloric-rated hood. Spikes are radioactive — follow your radiation-safety rules.', 'warn'));
+    refs.body.append(sources([REFS.edwards87, REFS.shen02, REFS.cheng13]), note('HClO₄ must be used only in a perchloric-rated hood. Spikes are radioactive — follow your radiation-safety rules.', 'warn'));
 
     function select(i, apply = true) {
       st.i = Math.max(0, Math.min(STEPS.length - 1, i));
